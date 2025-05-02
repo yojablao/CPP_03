@@ -6,7 +6,7 @@
 /*   By: yojablao <yojablao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 21:20:12 by yojablao          #+#    #+#             */
-/*   Updated: 2025/05/01 22:03:51 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:38:28 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ DiamondTrap::DiamondTrap(const std::string &name):ClapTrap(name + "_clap_name"),
     h_points = FragTrap::h_points;
     damage = FragTrap::damage;
 }
-DiamondTrap::DiamondTrap(const DiamondTrap &o):ClapTrap(o),ScavTrap(o),FragTrap(o)
+DiamondTrap::DiamondTrap(const DiamondTrap &o):ClapTrap(o),ScavTrap(o),FragTrap(o),_name(o.name)
 {
     *this = o;
     std::cout << "DiamondTrap copy constructor called for " << _name << std::endl;
@@ -31,6 +31,10 @@ DiamondTrap::~DiamondTrap()
 void DiamondTrap::whoAmI()
 {
     std::cout << "DiamondTrap name is "<< _name << " and ClapTrap name is  " << name << std::endl;   
+}
+void DiamondTrap::attack(const std::string &target)
+{
+    ScavTrap::attack(target);
 }
 DiamondTrap &DiamondTrap::operator=(const DiamondTrap &o)
 {

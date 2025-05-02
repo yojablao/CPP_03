@@ -6,7 +6,7 @@
 /*   By: yojablao <yojablao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 16:53:31 by yojablao          #+#    #+#             */
-/*   Updated: 2025/05/01 21:54:12 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:39:32 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 void ScavTrap::attack(const std::string &target)
 {
     if(h_points <= 0)
-    {std::cout << "ScavTrap ..." << name << " is dead"<<std::endl;
+    {std::cout << name << " is dead"<<std::endl;
         return;}
     else if(e_points <= 0)
-        std::cout << "ScavTrap "<< name << "no energy point"<<std::endl;
+        std::cout <<  name << "no energy point"<<std::endl;
     else
-        --this->e_points;std::cout << "ScavTrap " << name << " attacks "<< target << ", causing "<< damage << " points of damage!"<<std::endl;
+    {
+        --this->e_points;
+        std::cout  << name << " attacks "<< target << ", causing "<< damage << " points of damage!"<<std::endl;
+    }
 }
 ScavTrap &ScavTrap::operator=(const ScavTrap &o)
 {

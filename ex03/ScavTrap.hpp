@@ -6,12 +6,12 @@
 /*   By: yojablao <yojablao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 16:53:34 by yojablao          #+#    #+#             */
-/*   Updated: 2025/05/01 21:10:04 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/05/02 18:40:29 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP__HPP
-#define SCAVTRAP__HPP
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 #include "ClapTrap.hpp"
 
 class ScavTrap:virtual public ClapTrap
